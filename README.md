@@ -19,7 +19,7 @@ Users describe symptoms in natural language
 - Emergency requirement
 
 ***API:***
-POST /api/ai/analyze
+POST /api/ai/health
 
 **🚑 Emergency Resource Search**
 
@@ -35,7 +35,7 @@ POST /api/ai/analyze
 - Graceful fallback when no resources are found
 
 ***API:***
-POST /api/emergency/search
+POST /api/ai/search
 
 **🏥 Resource Registration (Public)**
 - Hospitals / Blood Banks can register themselves
@@ -135,20 +135,20 @@ to use the app.
 ## 📡 API Routes Summary
 
 **🧠 AI Routes (/api/ai)**
-POST /analyze   → AI symptom analysis
-
+POST /health   → AI symptom analysis
+POST /search
 **🚑 Emergency Routes (/api/emergency)**
-- POST /search
-- POST /add/resource
+
+POST /add/resource
 
 **🧾 Admin Request Routes (/api/request)**
-- GET    /received        (Admin only)
-- PATCH  /:id             (Admin only)
-- GET    /reverse-geocode
+GET    /received        (Admin only)
+PATCH  /:id             (Admin only)
+GET    /reverse-geocode
 
 **🔐 Admin Routes (/api/admin)**
-- POST /login
-- GET  /me    (Admin only)
+POST /login
+GET  /me    (Admin only)
 
 ## 🗄 Database Schema (Emergency Resource)
 ```js 

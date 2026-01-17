@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:7000/api", // ✅ http NOT https
+  baseURL: "https://mediassist-65hr.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },
