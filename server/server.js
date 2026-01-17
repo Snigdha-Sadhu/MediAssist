@@ -32,7 +32,7 @@ mongoose.connect(process.env.MONGO_URL) .then(()=>{
   console.log('mongodb connected');
   
   app.listen(PORT, "0.0.0.0", () => {
-  console.log("server running on", PORT);
+  console.log("server is running on", PORT);
 });
 })
 .catch(err => console.error(err));
